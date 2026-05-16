@@ -13,6 +13,10 @@
 
 **Live:** https://aktien-watcher-3rub.vercel.app/
 
+![Watchlist mit Live-Kursen](./docs/watchlist.png)
+
+![Detailansicht mit Chart](./docs/detail.png)
+
 ---
 
 ## Features
