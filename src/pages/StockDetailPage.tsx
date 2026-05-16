@@ -152,11 +152,11 @@ export default function StockDetailPage() {
                   : ''}
               </div>
               <button
-                className="range-btn"
+                className={`range-btn ${inWatchlist ? 'active' : ''}`}
                 style={{ marginTop: 8 }}
                 onClick={() => (inWatchlist ? remove(upper) : add(upper))}
               >
-                {inWatchlist ? '★ In Watchlist' : '☆ Zur Watchlist'}
+                {inWatchlist ? 'In Watchlist entfernen' : 'Zur Watchlist hinzufügen'}
               </button>
             </div>
           </div>

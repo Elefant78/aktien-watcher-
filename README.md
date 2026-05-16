@@ -11,10 +11,7 @@
 
 ## Demo
 
-> Screenshots / Live-Demo hier einfügen sobald deployed:
-> - Live: `https://aktienwatcher.vercel.app` (Platzhalter)
-> - Screenshot: `./docs/watchlist.png`
-> - Screenshot: `./docs/detail.png`
+**Live:** https://aktien-watcher-3rub.vercel.app/
 
 ---
 

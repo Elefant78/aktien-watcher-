@@ -23,7 +23,6 @@ export default function SearchBar({ onSelect }: Props) {
       setLoading(true);
       try {
         const data = await searchSymbols(query.trim());
-        // Filter: nur "Common Stock" und nicht-leere Symbole
         const filtered = (data.result ?? [])
           .filter((r) => r.symbol && !r.symbol.includes('.'))
           .slice(0, 8);
@@ -57,9 +56,21 @@ export default function SearchBar({ onSelect }: Props) {
 
   return (
     <div className="search-bar" ref={containerRef}>
-      <span className="search-icon" aria-hidden>
-        🔍
-      </span>
+      <svg
+        className="search-icon"
+        aria-hidden="true"
+        width="16"
+        height="16"
+        viewBox="0 0 24 24"
+        fill="none"
+        stroke="currentColor"
+        strokeWidth="2"
+        strokeLinecap="round"
+        strokeLinejoin="round"
+      >
+        <circle cx="11" cy="11" r="7" />
+        <line x1="21" y1="21" x2="16.65" y2="16.65" />
+      </svg>
       <input
         type="text"
         className="search-input"

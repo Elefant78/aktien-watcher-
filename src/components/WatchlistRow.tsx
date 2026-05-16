@@ -22,7 +22,13 @@ export default function WatchlistRow({ entry, symbol, onRemove }: Props) {
       <div className="cell-symbol">{symbol}</div>
       <div className="cell-name">{profile?.name ?? '—'}</div>
       <div className="cell-price">
-        {error ? '⚠️' : quote ? formatPrice(quote.c, profile?.currency) : '…'}
+        {error ? (
+          <span className="negative" title="Fehler beim Laden">—</span>
+        ) : quote ? (
+          formatPrice(quote.c, profile?.currency)
+        ) : (
+          '…'
+        )}
       </div>
       <div className={`cell-change col-change ${sign}`}>
         {quote ? formatChange(quote.d) : '…'}
